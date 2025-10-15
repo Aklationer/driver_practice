@@ -47,5 +47,4 @@ module_init(my_init);
 module_exit(my_exit);
 
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("Johannes 4Linux");
 MODULE_DESCRIPTION("A sample driver for registering a character device");
