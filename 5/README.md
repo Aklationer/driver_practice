@@ -1,1 +1,3 @@
-將原先register_chrdev``register_chrdev``給取代，改成用新的API，且無須手動在/dev底下建立device file
+根據driver 4 額外設定file中的private_data，讓每個開啟的file都有private_data
+
+

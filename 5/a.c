@@ -81,18 +81,13 @@ static struct file_operations fops = {
 static int __init my_init(void)
 {
 	int status;
-#ifdef STATIC_DEVNR
-	dev_nr = STATIC_DEVNR;
-	status = register_chrdev_region(dev_nr, MINORMASK + 1, "hello_cdev");
-#else
-	status = alloc_chrdev_region(&dev_nr, 0, MINORMASK + 1, "hello_cdev");
-#endif
+	status = alloc_chrdev_region(&dev_nr, 0, MINORMASK + 1, "hello_cdev");   //dev_nr 同是某major minor是0  
 	if (status) {
 		pr_err("hello_cdev - Error reserving the region of device numbers\n");
 		return status;
 	}
 
-	cdev_init(&my_cdev, &fops);
+	cdev_init(&my_cdev, &fops); // cdev跟 fops綁定
 	my_cdev.owner = THIS_MODULE;
 
 	status = cdev_add(&my_cdev, dev_nr, MINORMASK + 1);
