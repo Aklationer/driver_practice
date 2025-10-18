@@ -6,3 +6,6 @@
 
 GPIO 158 再用電阻串聯GND  Pull-Down 
  
+
+ 當 module 被載入到kernel時 會判斷button當前是否有被按
+ 
