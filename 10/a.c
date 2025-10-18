@@ -5,8 +5,7 @@
 static struct proc_dir_entry *proc_folder;
 static struct proc_dir_entry *proc_file;
 static char buffer[256];
-// wait queue
-DECLARE_WAIT_QUEUE_HEAD(wq1);
+
 
 static int my_open(struct inode *inode, struct file *filp)
 {
