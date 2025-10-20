@@ -1,0 +1,1 @@
+cmd_/home/joe/Desktop/test/file/a.ko := ld -r  -m elf_x86_64 -z noexecstack   --build-id=sha1  -T scripts/module.lds -o /home/joe/Desktop/test/file/a.ko /home/joe/Desktop/test/file/a.o /home/joe/Desktop/test/file/a.mod.o;  true
