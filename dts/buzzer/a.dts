@@ -1,0 +1,7 @@
+my_device {
+		compatible = "buzzer,mydev";
+		status = "okay";
+		label = "Test";
+		my_value = <12>;
+		buzzer-gpio = <&gpio4 30 GPIO_ACTIVE_LOW>;
+	};
